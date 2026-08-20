@@ -48,6 +48,16 @@ python -m src.cli
 
 The CLI always shows answer sources or an explicit `none` fallback. Interaction details are in `docs/user-experience.md`.
 
+## Visual UI
+
+Start the Python-backed local web UI:
+
+```bash
+python -m src.webapp
+```
+
+Open `http://127.0.0.1:8000`. The dashboard lets you ask questions, inspect source chunks, view refusal reasons, and see the committed evaluation metrics. The UI uses only Python's standard library and the files under `web/`.
+
 ## Evaluation
 
 Run the complete 25-case evaluation:
