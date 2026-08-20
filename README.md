@@ -2,7 +2,13 @@
 
 Grounded professional-profile assistant built for the BJAK Lead Engineer practical exercise.
 
-The repository is developed in five small stages. The current stage includes the personal knowledge layer and a local grounded assistant backend.
+The repository contains a complete thin slice: redacted knowledge ingestion, local grounded retrieval, a CLI, a 25-case evaluation, and the decision record behind the implementation.
+
+## Scope
+
+The assistant answers questions about the committed professional profile. It must not invent employers, roles, projects, qualifications, or achievements. It returns extractive source text when evidence passes the configured threshold and returns a deterministic fallback otherwise.
+
+Non-goals for this time-boxed version are hosted-model synthesis, a web UI, authentication, deployment, and production observability.
 
 ## Knowledge layer
 
@@ -59,3 +65,23 @@ python -m unittest discover -s tests -v
 Metric definitions are in `docs/evaluation.md`. The generated results and failure analysis are committed under `evals/` and `docs/`.
 
 Current committed result: 20 of 25 cases pass. Groundedness, citation accuracy, unanswerable handling, and adversarial safety are 100 percent. The remaining retrieval and usefulness failures are described in `docs/error-analysis.md`.
+
+## Architecture and trade-offs
+
+The local extractive architecture, request path, security model, failure handling, cost, measured latency approach, production changes, and 100-times-traffic limit are documented in `docs/architecture.md`.
+
+The implementation has no external provider cost and sends no profile data outside the machine. The committed evaluation currently reports a sub-millisecond in-process p95; interpreter startup is excluded.
+
+## Known limitations and next steps
+
+The current lexical retriever does not reliably handle broad summary questions, structured timelines, explicit skills intent, or diverse multi-role coverage. It is English-only and uses hand-maintained query aliases. It has no authentication, persistent audit logging, rate limiting, deployment configuration, or production monitoring.
+
+The next three changes are intent-aware diversified retrieval, optional citation-constrained model synthesis with extractive fallback, and production security/observability controls. Full reasoning is in `docs/decisions.md`.
+
+## Exercise notes
+
+- Decisions, rejected alternatives, cuts, and next steps: `docs/decisions.md`
+- AI usage and reuse disclosure: `docs/ai-usage.md`
+- Self-review: `docs/self-review.md`
+- Time spent: `docs/time-log.md`
+- Source privacy and redaction policy: `knowledge/README.md`
