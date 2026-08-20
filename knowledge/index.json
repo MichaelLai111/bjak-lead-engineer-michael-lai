@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "source_count": 3,
+  "chunk_count": 19,
+  "sources": [
+    {
+      "source_id": "resume-redacted-2026",
+      "path": "sources/resume_redacted.md",
+      "format": "markdown",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false
+    },
+    {
+      "source_id": "profile-structured-2026",
+      "path": "sources/profile.json",
+      "format": "json",
+      "source_type": "structured_profile",
+      "title": "Structured professional profile",
+      "updated_at": "2026-08-20",
+      "redacted": true,
+      "synthetic": false
+    },
+    {
+      "source_id": "knowledge-issues-2026",
+      "path": "issues.json",
+      "format": "json",
+      "source_type": "data_quality",
+      "title": "Known source gaps and handling rules",
+      "updated_at": "2026-08-20",
+      "redacted": false,
+      "synthetic": false
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "resume-redacted-2026:professional_summary:bcfc7af514cf",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "professional_summary",
+      "text": "Full Stack Engineer with more than ten years of experience building secure and scalable web platforms across fintech, insurance, and AI-enabled products.",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:full_stack_engineer_-_ai_claims_automation:2201b30211cf",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "full_stack_engineer_-_ai_claims_automation",
+      "text": "Employer: [REDACTED_INSURTECH]",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:full_stack_engineer_-_ai_claims_automation:29f0dde2fdcb",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "full_stack_engineer_-_ai_claims_automation",
+      "text": "Dates: March 2023 to November 2025",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:full_stack_engineer_-_ai_claims_automation:bfc2f82d295f",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "full_stack_engineer_-_ai_claims_automation",
+      "text": "Built secure claim-intake and review services combining claim details, policy data, uploaded documents, customer notes, and status updates through cloud-hosted APIs. Developed AI-assisted claim review features for summarization, document extraction, missing-information detection, fraud-signal indicators, and routing recommendations. Implemented a retrieval-augmented internal assistant for policy rules, coverage conditions, partner guidelines, and operational documentation. Delivered React dashboard features for claim queues, review status, customer submissions, policy details, processing history, and reviewer workflows. Used PostgreSQL and Redis for claim records, cached policy data, workflow status, user sessions, and fast lookups. Deployed and monitored services on AWS with secure environment configuration, logging, monitoring, and CloudWatch alerts. Reduced API latency by up to 70 percent through query optimization, Redis caching, request validation, structured logging, retry logic, and monitoring. Evaluated AI output for summary accuracy, hallucination risk, missing-field detection, and human-review escalation. Worked with product, QA, and insurance operations to test edge cases and reduce manual review friction.",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:full_stack_developer_-_bnpl_merchant_portal:3cf2696bd05d",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "full_stack_developer_-_bnpl_merchant_portal",
+      "text": "Employer: [REDACTED_FINTECH]",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:full_stack_developer_-_bnpl_merchant_portal:dac153f4039a",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "full_stack_developer_-_bnpl_merchant_portal",
+      "text": "Dates: February 2015 to September 2022",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:full_stack_developer_-_bnpl_merchant_portal:351c1b2906d6",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "full_stack_developer_-_bnpl_merchant_portal",
+      "text": "Built merchant portal features for transaction search, payment status, refund history, settlement summaries, onboarding, and account setup. Developed REST APIs for merchant transactions, installment plans, refunds, customer payment activity, and settlement records. Built frontend modules with React, TypeScript, Redux Toolkit, Tailwind CSS, and reusable components. Improved onboarding forms, validation, profile updates, error handling, and store configuration workflows. Designed dashboard widgets for transaction volume, pending and failed payments, refunds, and settlement status. Used PostgreSQL and Redis for transaction lookup, merchant settings, user sessions, and frequently accessed payment data. Reduced API latency by up to 70 percent through query optimization, caching, request validation, and monitoring. Supported QA, operations, releases, code reviews, production support, and iterative delivery.",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:education:5a522ee51ee9",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "education",
+      "text": "Institution: [REDACTED_UNIVERSITY]",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:education:fe0e1219468e",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "education",
+      "text": "Dates: 2010 to 2014",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:education:2fb7d398b439",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "education",
+      "text": "Degree: Bachelor of Engineering in Computer Science",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "resume-redacted-2026:skills:de180dc2475b",
+      "source_id": "resume-redacted-2026",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "section": "skills",
+      "text": "React, TypeScript, Python, Java, AWS, AI-enabled applications, JavaScript, Next.js, Redux Toolkit, HTML, and CSS.",
+      "source_path": "sources/resume_redacted.md",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {}
+    },
+    {
+      "chunk_id": "profile-structured-2026:summary:033ada3aacb1",
+      "source_id": "profile-structured-2026",
+      "source_type": "structured_profile",
+      "title": "Structured professional profile",
+      "section": "summary",
+      "text": "Full Stack Engineer with more than ten years of experience across fintech, insurance, and AI-enabled products.",
+      "source_path": "sources/profile.json",
+      "updated_at": "2026-08-20",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {
+        "record_id": "profile-summary",
+        "section": "summary"
+      }
+    },
+    {
+      "chunk_id": "profile-structured-2026:experience:1904ff15d081",
+      "source_id": "profile-structured-2026",
+      "source_type": "structured_profile",
+      "title": "Structured professional profile",
+      "section": "experience",
+      "text": "Worked as a Full Stack Engineer focused on AI claims automation at [REDACTED_INSURTECH] from March 2023 through November 2025.",
+      "source_path": "sources/profile.json",
+      "updated_at": "2026-08-20",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {
+        "record_id": "role-insurtech",
+        "section": "experience"
+      }
+    },
+    {
+      "chunk_id": "profile-structured-2026:experience:2b260064db7f",
+      "source_id": "profile-structured-2026",
+      "source_type": "structured_profile",
+      "title": "Structured professional profile",
+      "section": "experience",
+      "text": "Worked as a Full Stack Developer on a BNPL merchant portal at [REDACTED_FINTECH] from February 2015 through September 2022.",
+      "source_path": "sources/profile.json",
+      "updated_at": "2026-08-20",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {
+        "record_id": "role-fintech",
+        "section": "experience"
+      }
+    },
+    {
+      "chunk_id": "profile-structured-2026:technical_experience:0a3f2149bfc1",
+      "source_id": "profile-structured-2026",
+      "source_type": "structured_profile",
+      "title": "Structured professional profile",
+      "section": "technical_experience",
+      "text": "Built REST and cloud-hosted APIs, React interfaces, PostgreSQL and Redis data paths, AWS deployments, monitoring, and retrieval-augmented internal assistance.",
+      "source_path": "sources/profile.json",
+      "updated_at": "2026-08-20",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {
+        "record_id": "architecture-experience",
+        "section": "technical_experience"
+      }
+    },
+    {
+      "chunk_id": "profile-structured-2026:measured_outcome:31d6b182ee80",
+      "source_id": "profile-structured-2026",
+      "source_type": "structured_profile",
+      "title": "Structured professional profile",
+      "section": "measured_outcome",
+      "text": "Reduced API latency by up to 70 percent using query optimization, caching, validation, structured logging, retry logic, and monitoring.",
+      "source_path": "sources/profile.json",
+      "updated_at": "2026-08-20",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {
+        "record_id": "reliability-result",
+        "section": "measured_outcome"
+      }
+    },
+    {
+      "chunk_id": "profile-structured-2026:education:29e663d49d59",
+      "source_id": "profile-structured-2026",
+      "source_type": "structured_profile",
+      "title": "Structured professional profile",
+      "section": "education",
+      "text": "Completed a Bachelor of Engineering in Computer Science between 2010 and 2014 at [REDACTED_UNIVERSITY].",
+      "source_path": "sources/profile.json",
+      "updated_at": "2026-08-20",
+      "redacted": true,
+      "synthetic": false,
+      "metadata": {
+        "record_id": "education",
+        "section": "education"
+      }
+    },
+    {
+      "chunk_id": "knowledge-issues-2026:known_gap:e4d1248e68cb",
+      "source_id": "knowledge-issues-2026",
+      "source_type": "data_quality",
+      "title": "Known source gaps and handling rules",
+      "section": "known_gap",
+      "text": "The committed sources contain no employment record from October 2022 through February 2023.",
+      "source_path": "issues.json",
+      "updated_at": "2026-08-20",
+      "redacted": false,
+      "synthetic": false,
+      "metadata": {
+        "record_id": "employment-gap-2022-2023",
+        "section": "known_gap",
+        "handling_rule": "State that the period is undocumented. Do not infer unemployment, leave, study, consulting, or another activity."
+      }
+    },
+    {
+      "chunk_id": "knowledge-issues-2026:stale_fact:bd5d199e52b9",
+      "source_id": "knowledge-issues-2026",
+      "source_type": "data_quality",
+      "title": "Known source gaps and handling rules",
+      "section": "stale_fact",
+      "text": "The latest committed employment record ends in November 2025 and does not establish a current employer or role after that date.",
+      "source_path": "issues.json",
+      "updated_at": "2026-08-20",
+      "redacted": false,
+      "synthetic": false,
+      "metadata": {
+        "record_id": "current-status-after-2025",
+        "section": "stale_fact",
+        "handling_rule": "Do not claim a current employer, title, or activity. State the source coverage date and ask for an updated source if current status is required."
+      }
+    }
+  ]
+}

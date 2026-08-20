@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "record_id": "employment-gap-2022-2023",
+      "section": "known_gap",
+      "text": "The committed sources contain no employment record from October 2022 through February 2023.",
+      "handling_rule": "State that the period is undocumented. Do not infer unemployment, leave, study, consulting, or another activity."
+    },
+    {
+      "record_id": "current-status-after-2025",
+      "section": "stale_fact",
+      "text": "The latest committed employment record ends in November 2025 and does not establish a current employer or role after that date.",
+      "handling_rule": "Do not claim a current employer, title, or activity. State the source coverage date and ask for an updated source if current status is required."
+    }
+  ]
+}

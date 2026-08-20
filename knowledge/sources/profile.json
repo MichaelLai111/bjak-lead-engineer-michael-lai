@@ -1,0 +1,34 @@
+{
+  "records": [
+    {
+      "record_id": "profile-summary",
+      "section": "summary",
+      "text": "Full Stack Engineer with more than ten years of experience across fintech, insurance, and AI-enabled products."
+    },
+    {
+      "record_id": "role-insurtech",
+      "section": "experience",
+      "text": "Worked as a Full Stack Engineer focused on AI claims automation at [REDACTED_INSURTECH] from March 2023 through November 2025."
+    },
+    {
+      "record_id": "role-fintech",
+      "section": "experience",
+      "text": "Worked as a Full Stack Developer on a BNPL merchant portal at [REDACTED_FINTECH] from February 2015 through September 2022."
+    },
+    {
+      "record_id": "architecture-experience",
+      "section": "technical_experience",
+      "text": "Built REST and cloud-hosted APIs, React interfaces, PostgreSQL and Redis data paths, AWS deployments, monitoring, and retrieval-augmented internal assistance."
+    },
+    {
+      "record_id": "reliability-result",
+      "section": "measured_outcome",
+      "text": "Reduced API latency by up to 70 percent using query optimization, caching, validation, structured logging, retry logic, and monitoring."
+    },
+    {
+      "record_id": "education",
+      "section": "education",
+      "text": "Completed a Bachelor of Engineering in Computer Science between 2010 and 2014 at [REDACTED_UNIVERSITY]."
+    }
+  ]
+}

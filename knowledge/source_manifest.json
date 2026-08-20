@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "resume-redacted-2026",
+      "path": "sources/resume_redacted.md",
+      "format": "markdown",
+      "source_type": "cv",
+      "title": "Redacted CV",
+      "updated_at": "2026-08-04",
+      "redacted": true,
+      "synthetic": false
+    },
+    {
+      "source_id": "profile-structured-2026",
+      "path": "sources/profile.json",
+      "format": "json",
+      "source_type": "structured_profile",
+      "title": "Structured professional profile",
+      "updated_at": "2026-08-20",
+      "redacted": true,
+      "synthetic": false
+    },
+    {
+      "source_id": "knowledge-issues-2026",
+      "path": "issues.json",
+      "format": "json",
+      "source_type": "data_quality",
+      "title": "Known source gaps and handling rules",
+      "updated_at": "2026-08-20",
+      "redacted": false,
+      "synthetic": false
+    }
+  ]
+}
