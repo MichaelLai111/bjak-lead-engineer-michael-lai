@@ -23,3 +23,21 @@ See `knowledge/README.md` for the source policy, schema, redactions, and known g
 The assistant uses local weighted retrieval and returns source text without generative rewriting. It requires no API key and sends no profile data to an external provider.
 
 Configuration is documented in `.env.example`. The backend implementation is in `src/assistant.py`, and the design and trade-offs are described in `docs/architecture.md`.
+
+## Evaluation
+
+Run the complete 25-case evaluation:
+
+```bash
+python evals/run_eval.py
+```
+
+Run the focused unit tests:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+Metric definitions are in `docs/evaluation.md`. The generated results and failure analysis are committed under `evals/` and `docs/`.
+
+Current committed result: 20 of 25 cases pass. Groundedness, citation accuracy, unanswerable handling, and adversarial safety are 100 percent. The remaining retrieval and usefulness failures are described in `docs/error-analysis.md`.

@@ -26,6 +26,13 @@ OUT_OF_SCOPE_MARKERS = (
     "secret key",
 )
 CURRENT_STATUS_MARKERS = ("current", "currently", "present", "now", "today")
+FABRICATED_EMPLOYMENT_MARKERS = (
+    "pretend you worked",
+    "pretend i worked",
+    "invent an employer",
+    "make up an employer",
+)
+STRICT_EVIDENCE_MARKERS = ("certification", "certifications", "certified")
 
 
 @dataclass(frozen=True)
@@ -91,11 +98,50 @@ class GroundedAssistant:
                 reason="out_of_scope",
             )
 
+        if any(
+            marker in normalized_question for marker in FABRICATED_EMPLOYMENT_MARKERS
+        ):
+            return self._response(
+                started_at,
+                status="not_found",
+                answer=(
+                    "The committed professional sources do not contain enough evidence to answer "
+                    "that question. I will not invent an employer or role."
+                ),
+                sources=[],
+                reason="unsupported_employment_claim",
+            )
+
         search_query = question
         if any(marker in normalized_question for marker in CURRENT_STATUS_MARKERS):
             search_query = f"{question} current latest stale fact November 2025"
 
         results = self._index.search(search_query, self._settings.top_k)
+        asks_for_certification = any(
+            phrase in normalized_question
+            for phrase in (
+                "which certification",
+                "which cloud certification",
+                "what certification",
+                "do you hold",
+            )
+        ) and any(marker in normalized_question for marker in STRICT_EVIDENCE_MARKERS)
+        if asks_for_certification:
+            has_literal_evidence = any(
+                any(marker in result.text.lower() for marker in STRICT_EVIDENCE_MARKERS)
+                for result in results
+            )
+            if not has_literal_evidence:
+                return self._response(
+                    started_at,
+                    status="not_found",
+                    answer=(
+                        "The committed professional sources do not contain enough evidence to "
+                        "answer that question."
+                    ),
+                    sources=[],
+                    reason="strict_evidence_missing",
+                )
         relevant_results = [
             result for result in results if result.score >= self._settings.min_score
         ][: self._settings.max_answer_chunks]
