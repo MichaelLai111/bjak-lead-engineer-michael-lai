@@ -24,6 +24,24 @@ The assistant uses local weighted retrieval and returns source text without gene
 
 Configuration is documented in `.env.example`. The backend implementation is in `src/assistant.py`, and the design and trade-offs are described in `docs/architecture.md`.
 
+## Run the assistant
+
+No package installation is required. Use Python 3.11 or newer.
+
+Ask one question:
+
+```bash
+python -m src.cli --question "What experience do you have with AI?"
+```
+
+Start an interactive session:
+
+```bash
+python -m src.cli
+```
+
+The CLI always shows answer sources or an explicit `none` fallback. Interaction details are in `docs/user-experience.md`.
+
 ## Evaluation
 
 Run the complete 25-case evaluation:
