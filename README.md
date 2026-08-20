@@ -1,4 +1,4 @@
-# bjak-test
+# bjak-lead-engineer-michael-lai
 
 Grounded professional-profile assistant for the BJAK Lead Engineer practical exercise.
 
@@ -18,6 +18,7 @@ This repository contains a small, runnable vertical slice of a professional-back
 From the repository root:
 
 ```bash
+python -m pip install -r requirements.txt
 python scripts/build_knowledge.py
 ```
 
@@ -26,6 +27,16 @@ Expected output:
 ```text
 Built 19 chunks from 3 sources
 ```
+
+`requirements.txt` intentionally contains no packages because the application and test suite use only Python's standard library. There are therefore no third-party package versions to resolve or leave unpinned.
+
+### Verify the complete submission in one command
+
+```bash
+python scripts/verify_submission.py
+```
+
+This rebuilds the knowledge index, runs all tests, and runs the 25-case evaluation with temporary output files so the committed results remain unchanged.
 
 ### Run the visual UI
 
@@ -83,6 +94,8 @@ src/webapp.py                Python HTTP server and JSON API
 web/index.html               Visual dashboard
 web/styles.css               Local UI styling
 web/app.js                   UI interactions and rendering
+requirements.txt             Explicit zero-dependency declaration
+scripts/verify_submission.py One-command reviewer verification
 knowledge/                   Redacted sources and generated index
 evals/dataset.json           25 labeled evaluation questions
 evals/run_eval.py            Reproducible evaluation command
@@ -192,6 +205,17 @@ The application refuses or falls back in these situations:
 
 No profile data leaves the machine in the current implementation. No external model provider is called.
 
+All supported environment variables are listed in `.env.example`:
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `BJAK_INDEX_PATH` | `knowledge/index.json` | Knowledge index location |
+| `BJAK_TOP_K` | `3` | Maximum retrieved chunks |
+| `BJAK_MIN_SCORE` | `1.25` | Minimum retrieval evidence score |
+| `BJAK_MAX_ANSWER_CHUNKS` | `3` | Maximum chunks included in an answer |
+| `BJAK_WEB_HOST` | `127.0.0.1` | Local web bind address |
+| `BJAK_WEB_PORT` | `8000` | Local web port |
+
 ## Known Limitations and Next Steps
 
 This is a time-boxed engineering slice, not a production service. Known limitations include:
@@ -234,19 +258,27 @@ Details are recorded in `docs/time-log.md`.
 
 ## Submission Details
 
-- Repository: `bjak-lead-engineer-<yourname>` requirement adapted to this working repository: `bjak-test`
+- Repository: `bjak-lead-engineer-michael-lai`
 - Visibility: public, with personal information redacted
 - Review tag: `submission`
 - Reviewed state: the commit referenced by the `submission` tag
 - Main branch is pushed to the GitHub repository
 
+Email handoff information:
+
+```text
+Repository: https://github.com/MichaelLai111/bjak-lead-engineer-michael-lai
+Visibility: Public
+Review tag: submission
+Recipient: wonglingyit@bjak.my
+```
+
 To reproduce the final state:
 
 ```bash
 git checkout submission
-python scripts/build_knowledge.py
-python -m unittest discover -s tests -v
-python evals/run_eval.py
+python -m pip install -r requirements.txt
+python scripts/verify_submission.py
 python -m src.webapp
 ```
 
